@@ -1,0 +1,122 @@
+:root {
+	font-family: "Montserrat", sans-serif;
+	/*
+	 font-weight: 500;
+	 font-weight: 700;
+	 */
+  }
+  * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: var(font-family);
+  }
+  html {
+	font-size: 14px;
+  }
+  body {
+	background-color: #5b2d8f;
+  }
+  .container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 1080px;
+  }
+  .header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin: 100px 0;
+  }
+  .header h1 {
+	width: 26%;
+	font-weight: 500;
+	font-size: 2.85rem;
+	color: white;
+  }
+  /* 형광펜 효과 */
+  .header h1 span {
+	background: linear-gradient(to top, #fa3e00 50%, transparent 50%);
+  }
+  .header p {
+	display: flex;
+	align-items: center;
+	color: #a887e1;
+	/* 임의로 값 지정함 */
+	line-height: 1.7;
+  }
+  .header p::before {
+	content: "";
+	width: 100px;
+	height: 2px;
+	background-color: #a887e1;
+	/* 임의로 값 지정함 */
+	margin-right: 40px;
+  }
+
+.main{
+	margin: 100px 0;
+}
+.main .section{
+	display: flex;
+	margin-bottom: 1.7rem;
+}
+.section .img-and-txt{
+	position: relative;
+	width: 26%;
+}
+.img-and-txt span{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
+	font-weight: 500;
+	font-size: 2.14rem;
+}
+.section-div{
+	/* .section-div ul에서 반응이 없어 그 부모인 section-div에도 display:flex와 flex-direction:column을 부여*/
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	background-color: white;
+	width: 74%;
+}
+.img-and-txt img{
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+.section-div p{
+	color: #5b2d8f;
+	font-size: 1.28rem;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+.section-div ul{
+  display: flex;
+  flex-direction: column;
+  /* 크기 고르게 분산 */
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+.section-div ul li{
+	list-style: none;
+}
+/* list-style 없애고 가상 선택자로 만들어냄 */
+.section-div ul li::before{
+	content: "";
+	width: 8px;
+	height: 8px;
+	background-color: #a887e1;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 10px;
+}
+/* 두 번째 section만 좌우 반대 */
+.craft-section{
+flex-direction: row-reverse;
+}
